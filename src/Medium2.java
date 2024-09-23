@@ -8,6 +8,8 @@ public class Medium2 implements ActionListener {
     private JPanel controlPanel;
     private JPanel controlPanel2;
     private JPanel controlPanel3;
+    private JPanel controlPanel4;
+    private JPanel controlPanel5;
     private JMenuItem cut, copy, paste, selectAll;
     private JTextArea ta; //typing area
 
@@ -57,6 +59,12 @@ public class Medium2 implements ActionListener {
         controlPanel3 = new JPanel();
         controlPanel3.setLayout(new GridLayout(3,3));
 
+        controlPanel4 = new JPanel();
+        controlPanel4.setLayout(new GridLayout(2,1));
+
+        controlPanel5 = new JPanel();
+        controlPanel5.setLayout(new GridLayout());
+
 
     }
 
@@ -82,10 +90,17 @@ public class Medium2 implements ActionListener {
         JButton topButton3 = new JButton("Top 3");
         JButton topButton4 = new JButton("Top 4");
 
+        JLabel topRightLabel = new JLabel("Top Right", JLabel.CENTER);
+        JButton topRightButton = new JButton("1");
+
+
 
         mainFrame.add(controlPanel, BorderLayout.SOUTH);
         mainFrame.add(controlPanel2, BorderLayout.CENTER);
-        mainFrame.add(controlPanel3);
+        controlPanel2.add(controlPanel3);
+        controlPanel2.add(controlPanel4);
+        controlPanel2.add(controlPanel5);
+
         controlPanel.add(label1);
         controlPanel.add(button1);
         controlPanel.add(label2);
@@ -96,8 +111,18 @@ public class Medium2 implements ActionListener {
         controlPanel.add(button4);
         controlPanel.add(label5);
 
-        controlPanel3.add(Top);
+        controlPanel3.add(topLabel1);
+        controlPanel3.add(topButton1);
+        controlPanel3.add(topLabel2);
+        controlPanel3.add(topButton2);
+        controlPanel3.add(topLabel3);
+        controlPanel3.add(topButton3);
+        controlPanel3.add(topLabel4);
+        controlPanel3.add(topButton4);
+        controlPanel3.add(topLabel5);
 
+        controlPanel4.add(topRightLabel);
+        controlPanel4.add(topRightButton);
 
 
         mainFrame.setVisible(true);
