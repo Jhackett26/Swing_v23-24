@@ -9,7 +9,8 @@ public class Medium2 implements ActionListener {
     private JPanel controlPanel2;
     private JPanel controlPanel3;
     private JPanel controlPanel4;
-    private JPanel controlPanel5;
+    private JTextArea controlPanel5;
+    private JTextArea controlPanel6;
     private JMenuItem cut, copy, paste, selectAll;
     private JTextArea ta; //typing area
 
@@ -62,8 +63,11 @@ public class Medium2 implements ActionListener {
         controlPanel4 = new JPanel();
         controlPanel4.setLayout(new GridLayout(2,1));
 
-        controlPanel5 = new JPanel();
-        controlPanel5.setLayout(new GridLayout());
+        controlPanel5 = new JTextArea();
+        controlPanel5.setBounds(50, 5, WIDTH-100, HEIGHT-50);
+
+        controlPanel6 = new JTextArea();
+        controlPanel6.setBounds(50, 5, WIDTH-100, HEIGHT-50);
 
 
     }
@@ -100,6 +104,7 @@ public class Medium2 implements ActionListener {
         controlPanel2.add(controlPanel3);
         controlPanel2.add(controlPanel4);
         controlPanel2.add(controlPanel5);
+        controlPanel2.add(controlPanel6);
 
         controlPanel.add(label1);
         controlPanel.add(button1);
